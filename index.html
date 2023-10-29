@@ -34,9 +34,40 @@
         .appendix-table th {
             background-color: #f2f2f2;
         }
+        .side-index {
+            position: fixed;
+            top: 20%;
+            left: 0;
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+        .side-index ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .side-index li {
+            margin-bottom: 10px;
+        }
+        .side-index a {
+            text-decoration: none;
+            color: #333;
+        }
+        .side-index a:hover {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+    <div class="side-index">
+        <ul>
+            <li><a href="#personal-statement">Personal Statement</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#internship">Internship Experience</a></li>
+            <li><a href="#employment">Vacation Employment</a></li>
+            <li><a href="#appendix">Appendix</a></li>
+        </ul>
+    </div>
+    
     <h1>Jamie Hoban</h1>
     <div class="contact-info">
         <p>Address: Erriff, Liscarney, Westport, Co. Mayo F28NH24</p>
@@ -45,20 +76,20 @@
         <p>LinkedIn: <a href="www.linkedin.com/in/jamiehoban">www.linkedin.com/in/jamiehoban</a></p>
     </div>
 
-    <div class="section-heading">PERSONAL STATEMENT</div>
+    <div class="section-heading" id="personal-statement">PERSONAL STATEMENT</div>
     <div class="section-content">
         <p>
             I am a 20-year-old, Quantitative Finance student from Maynooth University. The topics I have a keen interest in are Mathematics, Statistics and Finance. I am eager to take part in internships and work placements which can further advance my knowledge of the finance and statistics sectors.
         </p>
     </div>
 
-    <div class="section-heading">EDUCATION</div>
+    <div class="section-heading" id="education">EDUCATION</div>
     <div class="section-content">
         <p><b>2014-2020</b><br>Rice College, Westport, Co. Mayo<br>Leaving Certificate CAO Points: 577<br>(See Appendix for result breakdown)</p>
         <p><b>2020 - to date (Expected Graduation 2024)</b><br>Maynooth University, Maynooth, Co. Kildare.<br>B.Sc. In Quantitative Finance<br>Year 2: Overall Grade: 83.3% (First Class Honour)<br>Year 1: Overall Grade: 85.8% (First Class Honour)<br>(See Appendix for result breakdown)</p>
     </div>
 
-    <div class="section-heading">INTERNSHIP EXPERIENCE</div>
+    <div class="section-heading" id="internship">INTERNSHIP EXPERIENCE</div>
     <div class="section-content">
         <p>
             Summer 2022 Investec Ireland, The Harcourt Building, Harcourt Street, Dublin 2, D02F721<br>
@@ -72,7 +103,7 @@
         </ul>
     </div>
 
-<div class="section-heading">VACATION EMPLOYMENT</div>
+    <div class="section-heading" id="employment">VACATION EMPLOYMENT</div>
     <div class="section-content">
         <p>
             Summer and 	O’Connor’s SuperValu, Shop Street, Westport, Co Mayo
@@ -97,7 +128,7 @@
         </ul>
     </div>
     
-    <div class="section-heading">APPENDIX</div>
+    <div class="section-heading" id="appendix">APPENDIX</div>
     <div class="section-content">
         <table class="appendix-table">
             <!-- Insert the appendix table here -->
@@ -105,4 +136,3 @@
     </div>
 </body>
 </html>
-
