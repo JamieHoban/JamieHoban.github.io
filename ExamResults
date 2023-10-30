@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+</head>
+<body>
+    <div class="section-heading">EXAM RESULTS</div>
+    <div class="section-content">
+        <table class="appendix-table">
+            <!-- Insert the appendix table here -->
+        </table>
+    </div>
+</body>
+</html>
