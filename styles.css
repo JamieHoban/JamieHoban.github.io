@@ -1,0 +1,21 @@
+body {
+    display: flex;
+}
+
+.navbar {
+    background-color: #f1f1f1;
+    padding: 20px;
+    min-width: 200px; /* Set a fixed width for the sidebar */
+}
+
+.navbar a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+}
