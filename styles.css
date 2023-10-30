@@ -6,6 +6,7 @@
     padding: 20px;
     display: flex; /* Make it a horizontal flex container */
     justify-content: space-between; /* Distribute items evenly */
+    text-align: center;
 }
 
 .navbar a {
