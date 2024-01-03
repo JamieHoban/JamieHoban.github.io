@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Statsboard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .statsboard {
+      width: 100%;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    .statsboard th,
+    .statsboard td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    .statsboard th {
+      background-color: #ccc;
+    }
+
+    .prompt-bar {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .prompt-bar input {
+      width: 100%;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="statsboard">
+    <h1>KEY PERFORMANCE INDICATORS</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>ROSCOMMON</th>
+          <th>DUBLIN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TURNOVER RATE</td>
+          <td>42%</td>
+          <td>19%</td>
+        </tr>
+        <tr>
+          <td>FOULS</td>
+          <td>78%</td>
+          <td>71%</td>
+        </tr>
+        <tr>
+          <td>FULLTIME</td>
+          <td>ROSCOMMON</td>
+          <td>DUBLIN</td>
+        </tr>
+        <tr>
+          <td>THROWING WON</td>
+          <td>7 from 7 (87%)</td>
+          <td>5 from 7 (71%)</td>
+        </tr>
+        <tr>
+          <td>SHOT ORIGIN</td>
+          <td>1:4 (25%)</td>
+          <td>0:22 (50%)</td>
+        </tr>
+        <tr>
+          <td>ROSCOMMON KICKOUTS</td>
+          <td>RETAINED: 7 (78%) SCORED: 1 (14%)</td>
+          <td>RETAINED: 6 (66%) SCORED: 2 (33%)</td>
+        </tr>
+        <tr>
+          <td>ROSCOMMON SHOTS</td>
+          <td>SCORED: 5 from 7 (71%)</td>
+          <td>SCORED: 0 from 22 (0%)</td>
+        </tr>
+        <tr>
+          <td>DUBLIN KICKOUTS</td>
+          <td>RETAINED: 5 (60%) SCORED: 0 (0%)</td>
+          <td>RETAINED: 7 (70%) SCORED: 1 (10%)</td>
+        </tr>
+        <tr>
+          <td>DUBLIN SHOTS</td>
+          <td>SCORED: 2 from 22 (9%)</td>
+          <td>SCORED: 5 from 7 (71%)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="prompt-bar">
+    <input type="text" placeholder="Prompt">
+  </div>
+
+  <script>
+    // Get the prompt bar input element.
+    const promptBarInput = document.querySelector('.prompt-bar input');
+
+    // Add an event listener to the prompt bar input element.
+    promptBarInput.addEventListener('input', function() {
+      // Get the prompt value.
+      const promptValue = promptBarInput.value;
+
+      // Update the statsboard with the prompt value.
+      updateStatsboard(promptValue);
+    });
+
+    // Update the statsboard with the given prompt value.
+    function updateStatsboard(promptValue) {
+      // Get the statsboard table element.
+      const statsboardTable = document.querySelector('.statsboard table');
+
+      // Clear the statsboard table.
+      statsboardTable.innerHTML = '';
+
+      // Create a new table head element.
+      const tableHead = document.createElement('thead');
+
+      // Create a new table row element for the table head.
+      const tableRow = document.createElement('tr');
+
+      // Create a new table header cell element for each column of the statsboard.
+      const tableHeaderCells = ['Statistic', 'ROSCOMMON', 'DUBLIN'].map(function(column) {
+        const tableHeaderCell = document.createElement('th');
+        tableHeaderCell.textContent = column;
+        return tableHeaderCell;
+      });
+
+      // Append the table header cells to the table row.
+      tableRow.append(...tableHeaderCells);
+
+      // Append the table row to the table
